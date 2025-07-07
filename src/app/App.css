@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.mode-change {
+  padding: 10px 20px;
+  margin: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ff6600;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mode-change:hover {
+  background-color: #cc5200;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-top: 20px;
+}
