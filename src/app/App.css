@@ -1,34 +1,36 @@
 body {
   margin: 0;
-  font-family: sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 body.dark-mode {
-  background-color: #1B263B;
-  color: #ffffff;
+  background-color: #121212;
+  color: #f5f5f5;
 }
 
-.mode-change {
-  padding: 10px 20px;
-  margin: 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #ff6600;
+div {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background-color: #222;
   color: white;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.mode-change:hover {
-  background-color: #cc5200;
-}
-
-.heading {
-  font-size: 2rem;
-  margin-top: 20px;
+  text-align: center;
+  padding: 1rem 0;
 }
