@@ -21,12 +21,12 @@ export default function NavBar({ darkMode, toggleTheme }) {
   };
 
   return (
-    <nav>
+    <nav className={darkMode ? 'dark-nav' : 'light-nav'}>
       <div className='logo-content'>
         <Link to="/">&lt;/&gt; My Portfolio</Link>
       </div>
 
-      <div className={`link-page-content ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+      <div className={`link-page-content ${mobileMenuOpen ? 'mobile-open' : ''} ${darkMode ? 'dark-nav-links' : ''}`}>
         <Link to="/home"><HomeIcon /> Home</Link>
         <Link to="/about"><InfoIcon /> About</Link>
         <Link to="/contact"><ContactlessIcon /> Contact</Link>

@@ -1,18 +1,22 @@
+.app-container {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-container.light-mode {
+  background-color: #f9f9f9;
+  color: #1B263B;
+}
+
+.app-container.dark-mode {
+  background-color: #0D1B2A;
+  color: #f5f5f5;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.light-mode {
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: #f5f5f5;
 }
 
 div {
@@ -26,11 +30,4 @@ a {
 
 main {
   padding: 2rem;
-}
-
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
 }

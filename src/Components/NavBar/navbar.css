@@ -2,12 +2,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffffff;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 6px rgba(166, 164, 164, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.light-nav {
+  background-color: #ffffff;
+}
+
+.dark-nav {
+  background-color: #1B263B;
 }
 
 .logo-content {
@@ -15,13 +23,12 @@ nav {
   font-weight: bold;
 }
 
-.logo-content a {
+.light-nav .logo-content a {
   color: rgb(57, 53, 53);
-  text-decoration: none;
 }
 
-.logo-content a:hover {
-  text-decoration: none;
+.dark-nav .logo-content a {
+  color: #ffffff;
 }
 
 .link-page-content {
@@ -34,18 +41,31 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.5rem;
- background-color: #ffffff30;
   padding: 0.6rem 1rem;
   border-radius: 8px;
-  color: rgb(0, 0, 0);
   font-weight: 500;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
-.link-page-content a:hover {
+.light-nav .link-page-content a {
+  background-color: #ffffff30;
+  color: rgb(0, 0, 0);
+}
+
+.dark-nav .link-page-content a {
+  background-color: #1B263B30;
+  color: #ffffff;
+}
+
+.light-nav .link-page-content a:hover {
   background-color: #060606ea;
   color: #ffffff;
+}
+
+.dark-nav .link-page-content a:hover {
+  background-color: #ffffff30;
+  color: #1B263B;
 }
 
 .active-link {
@@ -56,7 +76,6 @@ nav {
 .theme-toggle {
   background: rgba(0, 0, 0, 0.063);
   border: none;
-  color: rgb(0, 0, 0);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -66,34 +85,51 @@ nav {
   transition: all 0.3s ease;
 }
 
-.theme-toggle:hover {
+.light-nav .theme-toggle {
+  color: rgb(0, 0, 0);
+}
+
+.dark-nav .theme-toggle {
+  color: #ffffff;
+}
+
+.light-nav .theme-toggle:hover {
   background-color: #060606ea;
   color: #ffffff;
+}
+
+.dark-nav .theme-toggle:hover {
+  background-color: #ffffff30;
+  color: #1B263B;
 }
 
 .mobile-menu-button {
   display: none;
   background: transparent;
   border: none;
-  color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 1.5rem;
 }
 
+.light-nav .mobile-menu-button {
+  color: rgb(0, 0, 0);
+}
+
+.dark-nav .mobile-menu-button {
+  color: #ffffff;
+}
+
 /* Mobile Responsive */
 @media (max-width: 1024px) {
-
-.logo-content {
-  font-size: 1.1rem;
-  
-}
+  .logo-content {
+    font-size: 1.1rem;
+  }
 
   .link-page-content {
     position: fixed;
     top: 80px;
     left: 0;
     right: 0;
-    background-color: #8996c0;
     flex-direction: column;
     gap: 0;
     padding: 1rem 0;
@@ -101,6 +137,14 @@ nav {
     transform: translateY(-150%);
     transition: transform 0.3s ease;
     z-index: 999;
+  }
+
+  .light-nav .link-page-content {
+    background-color: #ffffff;
+  }
+
+  .dark-nav .link-page-content {
+    background-color: #1B263B;
   }
 
   .link-page-content.mobile-open {
@@ -114,12 +158,12 @@ nav {
     justify-content: flex-start;
   }
 
-  .mobile-menu-button {
-    display: block;
-  }
-
   .theme-toggle {
     margin-top: 1rem;
     padding: 1rem;
+  }
+
+  .mobile-menu-button {
+    display: block;
   }
 }

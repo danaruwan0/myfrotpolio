@@ -30,6 +30,10 @@ function App() {
       secondary: {
         main: '#ffcb05',
       },
+      background: {
+        default: darkMode ? '#0D1B2A' : '#f9f9f9',
+        paper: darkMode ? '#1B263B' : '#ffffff',
+      },
     },
   });
 
@@ -40,8 +44,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Router>
-        <div>
+      <div className={`app-container ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+        <Router>
           <NavBar darkMode={darkMode} toggleTheme={toggleTheme} />
           <Logo />
           <Text />
@@ -56,9 +60,9 @@ function App() {
             <Route path="/skills" element={<Skills />} />
           </Routes>
 
-          <Footer />
-        </div>
-      </Router>
+          <Footer darkMode={darkMode} />
+        </Router>
+      </div>
     </ThemeProvider>
   );
 }
