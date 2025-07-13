@@ -24,12 +24,12 @@ function App() {
   const theme = createTheme({
     palette: {
       mode: darkMode ? 'dark' : 'light',
-      primary: {
-        main: '#004aad',
-      },
-      secondary: {
-        main: '#ffcb05',
-      },
+      // primary: {
+      //   main: '#004aad',
+      // },
+      // secondary: {
+      //   main: '#ffcb05',
+      // },
       background: {
         default: darkMode ? '#0D1B2A' : '#f9f9f9',
         paper: darkMode ? '#1B263B' : '#ffffff',
@@ -47,8 +47,6 @@ function App() {
       <div className={`app-container ${darkMode ? 'dark-mode' : 'light-mode'}`}>
         <Router>
           <NavBar darkMode={darkMode} toggleTheme={toggleTheme} />
-          <Logo />
-          <Text />
 
           <Routes>
             <Route path="/" element={<Navigate to="/home" replace />} />
@@ -60,8 +58,11 @@ function App() {
             <Route path="/skills" element={<Skills />} />
           </Routes>
 
-          <Footer darkMode={darkMode} />
+          {/* <Footer darkMode={darkMode} /> */}
         </Router>
+
+       
+        
       </div>
     </ThemeProvider>
   );

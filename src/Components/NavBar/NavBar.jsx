@@ -29,10 +29,10 @@ export default function NavBar({ darkMode, toggleTheme }) {
       <div className={`link-page-content ${mobileMenuOpen ? 'mobile-open' : ''} ${darkMode ? 'dark-nav-links' : ''}`}>
         <Link to="/home"><HomeIcon /> Home</Link>
         <Link to="/about"><InfoIcon /> About</Link>
-        <Link to="/contact"><ContactlessIcon /> Contact</Link>
         <Link to="/education"><SchoolIcon /> Education</Link>
-        <Link to="/projects"><TaskAltIcon /> Projects</Link>
         <Link to="/skills"><BuildIcon /> Skills</Link>
+        <Link to="/projects"><TaskAltIcon /> Projects</Link>
+        <Link to="/contact"><ContactlessIcon /> Contact</Link>
         
         <button className="theme-toggle" onClick={toggleTheme}>
           {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
